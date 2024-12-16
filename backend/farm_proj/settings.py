@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'farm_app',
     'animals_app',
     'crops_app',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -110,6 +112,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAUL_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 
 # Internationalization
